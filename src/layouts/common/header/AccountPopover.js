@@ -12,10 +12,14 @@ import {
   Link,
 } from "@mui/material";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
+import PATHS from "../../../constants/paths";
+import { useDispatch } from "react-redux";
+import { logout } from "../../../actions/users";
 
 const AccountPopover = ({ user, menuOptions }) => {
   const [open, setOpen] = useState(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
@@ -25,32 +29,37 @@ const AccountPopover = ({ user, menuOptions }) => {
     setOpen(null);
   };
 
-  const handleLogout = () => {
+  const handleLogoutClick = () => {
+    dispatch(logout());
     setOpen(null);
-    navigate("/");
+    navigate(PATHS.HOME);
   };
 
   return (
     <>
-      <IconButton
-        onClick={handleOpen}
-        sx={{
-          p: 0,
-          ...(open && {
-            "&:before": {
-              zIndex: 1,
-              content: "''",
-              width: "100%",
-              height: "100%",
-              borderRadius: "50%",
-              position: "absolute",
-              bgcolor: (theme) => alpha(theme.palette.grey[900], 0.8),
-            },
-          }),
-        }}
-      >
-        <Avatar src={user?.avatarUrl} />
-      </IconButton>
+      <Stack onClick={handleOpen} direction="row" spacing={1} sx={{ alignItems: "center", cursor: "pointer" }}>
+        <IconButton
+          sx={{
+            p: 0,
+            ...(open && {
+              "&:before": {
+                zIndex: 1,
+                content: "''",
+                width: "100%",
+                height: "100%",
+                borderRadius: "50%",
+                position: "absolute",
+                bgcolor: (theme) => alpha(theme.palette.grey[900], 0.8),
+              },
+            }),
+          }}
+        >
+          <Avatar src={user?.avatarUrl} />
+        </IconButton>
+        <Typography variant="subtitle1" color="text.primary">
+          {user?.name}
+        </Typography>
+      </Stack>
 
       <Popover
         open={Boolean(open)}
@@ -73,7 +82,7 @@ const AccountPopover = ({ user, menuOptions }) => {
       >
         <Box sx={{ my: 1.5, px: 2.5 }}>
           <Typography variant="subtitle2" noWrap>
-            {`${user?.firstName} ${user?.lastName}`}
+            {user?.name}
           </Typography>
           <Typography variant="body2" sx={{ color: "text.secondary" }} noWrap>
             {user?.email}
@@ -99,7 +108,7 @@ const AccountPopover = ({ user, menuOptions }) => {
 
         <Divider sx={{ borderStyle: "dashed" }} />
 
-        <MenuItem onClick={handleLogout} sx={{ m: 1 }}>
+        <MenuItem onClick={handleLogoutClick} sx={{ m: 1 }}>
           Logout
         </MenuItem>
       </Popover>

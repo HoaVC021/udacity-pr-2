@@ -67,9 +67,17 @@ Header.propTypes = {
 
 const menuItems = [
   {
-    name: "Products",
-    path: "/products",
+    name: "Home",
+    path: PATHS.HOME,
   },
+  {
+    name: "Leaderboard",
+    path: PATHS.LEADERBOARD
+  },
+  {
+    name: "New",
+    path: PATHS.ADD_QUESTION
+  }
 ];
 
 const MENU_OPTIONS = [
@@ -82,12 +90,7 @@ const MENU_OPTIONS = [
     label: "Profile",
     icon: "eva:person-fill",
     path: PATHS.USER_ACCOUNT_PROFILE,
-  },
-  {
-    label: "Orders",
-    icon: "eva:settings-2-fill",
-    path: PATHS.USER_ORDERS,
-  },
+  }
 ];
 
 export default function Header({ user, onOpenNav }) {
@@ -114,14 +117,13 @@ export default function Header({ user, onOpenNav }) {
                 underline="none"
                 sx={{ display: "inline-flex", alginItems: "center" }}
               >
-                {/* <Box component="img" alt="Logo" src={hciLogo} sx={{ mr: 1 }} /> */}
                 <StyledTextLogo variant="h3" component="h1">
                   EMP
                 </StyledTextLogo>
               </Link>
             </StyledBox>
 
-            <Stack direction="row" spacing={2} sx={{ ml: 2, display: "none" }}>
+            <Stack direction="row" spacing={1} sx={{ ml: 2, display: "block" }}>
               {menuItems.map((item) => (
                 <Link
                   key={item.name}

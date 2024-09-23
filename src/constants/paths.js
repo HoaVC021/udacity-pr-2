@@ -11,6 +11,8 @@ const PATHS = Object.freeze({
   USER_ACCOUNT_PASSWORD: '/user/account/password',
   USER_ACCOUNT_ADDRESS: '/user/account/addresses',
   USER_ORDERS: '/user/orders',
+  LEADERBOARD: '/leaderboard',
+  ADD_QUESTION: '/add'
 });
 
 export default PATHS;
