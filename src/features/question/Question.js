@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback, useState, useEffect } from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { Avatar, Box, Grid, Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';

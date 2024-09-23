@@ -38,9 +38,17 @@ const Router = () => {
           element: <ProtectedRoute />,
           children: [
             { path: "/", element: <HomePage /> },
-            { path: "/question/:id", element: <QuestionPage /> },
+            { path: "/questions/:id", element: <QuestionPage /> },
             { path: "/add", element: <CreateQuestionPage /> },
-            { path: "/leaderboard", element: <LeaderBoardPage /> }
+            { path: "/leaderboard", element: <LeaderBoardPage /> },
+            {
+              path: "/404",
+              element: <NotFoundPage />,
+            },
+            {
+              path: "*",
+              element: <Navigate to="/404" replace />,
+            },
           ]
         },
       ],
@@ -51,15 +59,7 @@ const Router = () => {
       children: [
         { path: "login", element: <LoginPage /> }
       ]
-    },
-    {
-      path: "/404",
-      element: <NotFoundPage />,
-    },
-    {
-      path: "*",
-      element: <Navigate to="/404" replace />,
-    },
+    }
   ]);
 };
 

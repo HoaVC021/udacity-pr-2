@@ -8,7 +8,7 @@ const QuestionCard = ({ question }) => {
   const navigate = useNavigate();
 
   const handleClick = useCallback(() => {
-    navigate(`/question/${question.id}`);
+    navigate(`/questions/${question.id}`);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

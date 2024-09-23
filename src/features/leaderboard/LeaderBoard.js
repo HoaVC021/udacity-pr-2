@@ -6,6 +6,10 @@ const LeaderBoard = () => {
   const { users } = useSelector(state =>  state.users);
 
   const userData = useMemo(() => {
+    if (!users) {
+      return [];
+    }
+    
     return Object.values(users).map(user => {
       const answered = Object.keys(user.answers).length;
       const created = user.questions.length;
@@ -13,8 +17,9 @@ const LeaderBoard = () => {
         ...user,
         answered,
         created,
+        total: answered + created
       };
-    });
+    }).sort((a, b) => a.total > b.total);
   }, [users]);
 
   return (
