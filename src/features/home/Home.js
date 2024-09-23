@@ -35,7 +35,7 @@ const Home = () => {
     }
   }, [dispatch, questions]);
 
-  console.log('questions', questions);
+  // console.log('questions', questions);
 
   return (
     <>

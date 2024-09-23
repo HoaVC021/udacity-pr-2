@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionCard Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-91svcj-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-h6 css-1pot5ch-MuiTypography-root"
+      >
+        John Doe
+      </h6>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-179zhq7-MuiTypography-root"
+      />
+    </div>
+    <hr
+      class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+    />
+    <div
+      class="MuiCardActions-root MuiCardActions-spacing css-xm0xqa-MuiCardActions-root"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1jvkc28-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        Show
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

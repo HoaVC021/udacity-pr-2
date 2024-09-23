@@ -1,5 +1,5 @@
 import { RECEIVE_USER_DATA } from "../actions/shared";
-import { LOGIN, LOGOUT } from "../actions/users";
+import { LOGIN, LOGOUT, UPDATE_USER_VOTED, USER_ADD_QUESTION } from "../actions/users";
 
 const initialState = {
   users: null,
@@ -21,6 +21,30 @@ const users = (state = initialState, action) => {
         isAuthenticated: false,
         user: null
       };
+      case USER_ADD_QUESTION:
+        return {
+          ...state,
+          users: {
+              ...state.users,
+              [action.authedUser]:{
+                ...state.users[action.authedUser],
+                questions: [...state.users[action.authedUser].questions, action.question.id]
+              }
+          },
+        };
+    case UPDATE_USER_VOTED: 
+    return {
+      ...state,
+          users: {
+              ...state.users,
+              [action.authedUser]:{
+                ...state.users[action.authedUser],
+                answers: {
+                  ...state.users[action.authedUser].answers, 
+                  [action.qid]: action.answer}
+              }
+          },
+  };
     case RECEIVE_USER_DATA:
       return {
         ...state,

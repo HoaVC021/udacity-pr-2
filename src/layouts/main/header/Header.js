@@ -16,7 +16,6 @@ import {
 } from "@mui/material";
 // utils
 // components
-import { Iconify } from "../../../components";
 //
 import { AccountPopover } from "../../common/header";
 import PATHS from "../../../constants/paths";
@@ -51,12 +50,6 @@ const StyledBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     display: "block",
   },
-}));
-
-const StyledStack = styled(Stack)(({ theme }) => ({
-  backgroundColor: alpha(theme.palette.background.content, 0.1),
-  WebkitBackdropFilter: "blur(6px)",
-  backdropFilter: "blur(6px)",
 }));
 
 // ----------------------------------------------------------------------
@@ -107,7 +100,6 @@ export default function Header({ user, onOpenNav }) {
                 display: { lg: "none" },
               }}
             >
-              <Iconify icon="eva:menu-2-fill" />
             </IconButton>
 
             <StyledBox sx={{ mr: 2 }}>
@@ -159,11 +151,7 @@ export default function Header({ user, onOpenNav }) {
                     borderRadius: 2,
                   }}
                 >
-                  <Iconify
-                    icon="material-symbols:account-circle"
-                    width={24}
-                    height={24}
-                  />
+                  
                   &nbsp; Login
                 </Button>
               )}

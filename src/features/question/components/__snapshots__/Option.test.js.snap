@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Option Component should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-abjdan"
+  >
+    <div
+      class="MuiBox-root css-uawqwr"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-1699v82-MuiTypography-root"
+      >
+        Option 1
+      </p>
+    </div>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-fullWidth css-w9wzph-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      Click
+    </button>
+  </div>
+</DocumentFragment>
+`;

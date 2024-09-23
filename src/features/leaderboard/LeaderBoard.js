@@ -3,7 +3,7 @@ import { Box, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, 
 import { useSelector } from 'react-redux';
 
 const LeaderBoard = () => {
-  const { users } = useSelector(state => state.users);
+  const { users } = useSelector(state =>  state.users);
 
   const userData = useMemo(() => {
     return Object.values(users).map(user => {
@@ -42,7 +42,7 @@ const LeaderBoard = () => {
                   </Stack>
                 </Stack>
               </TableCell>
-              <TableCell align="left">{Object.keys(user.answered).length}</TableCell>
+              <TableCell align="left">{user.answered}</TableCell>
               <TableCell align="left">{user.created}</TableCell>
             </TableRow>
           ))}

@@ -3,6 +3,7 @@ import { alpha } from "@mui/material/styles";
 import {
   IconButton,
   Avatar,
+  Button,
   Stack,
   Divider,
   Box,
@@ -54,11 +55,14 @@ const AccountPopover = ({ user, menuOptions }) => {
             }),
           }}
         >
-          <Avatar src={user?.avatarUrl} />
+          <Avatar src={user?.avatarURL} />
         </IconButton>
         <Typography variant="subtitle1" color="text.primary">
           {user?.name}
         </Typography>
+        <Button onClick={handleLogoutClick}>
+          Logout
+        </Button>
       </Stack>
 
       <Popover

@@ -50,6 +50,7 @@ const Question = () => {
     return 0;
   }, [question]);
 
+
   const handleVote = useCallback((optionName) => {
     dispatch(handleSaveQuestionAnswer(user.id, question.id, optionName ));
   // eslint-disable-next-line react-hooks/exhaustive-deps

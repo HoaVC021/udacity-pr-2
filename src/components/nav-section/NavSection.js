@@ -19,7 +19,6 @@ import {
 } from "@mui/material";
 
 import { StyledNavItem, StyledNavItemIcon } from "./styles";
-import Iconify from "../iconify/Iconify";
 
 const NavItem = ({ item, miniDrawer }) => {
   const { path, title, icon, info, children } = item;
@@ -79,31 +78,14 @@ const NavItem = ({ item, miniDrawer }) => {
             >
               <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon>
               <Typography variant="iconLabel">{title}</Typography>
-              <Iconify
-                icon="material-symbols:arrow-forward-ios-rounded"
-                width={10}
-                height={10}
-                sx={{
-                  position: "absolute",
-                  right: 4,
-                  top: 8,
-                  fontWeight: 700,
-                }}
-              />
+              
             </Box>
           ) : (
             <>
               <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon>
               <ListItemText primary={title} />
               {info && info}
-              <Iconify
-                icon={
-                  open
-                    ? "eva:arrow-ios-downward-fill"
-                    : "eva:arrow-ios-forward-fill"
-                }
-                sx={{ width: 16, height: 16, mx: 1 }}
-              />
+              
             </>
           )}
         </StyledNavItem>

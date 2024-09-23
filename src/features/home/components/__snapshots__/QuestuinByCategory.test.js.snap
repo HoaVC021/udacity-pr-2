@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionsByCategory Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-153rels"
+  >
+    <div
+      class="MuiBox-root css-1s00k8g"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-10zsxzp-MuiTypography-root"
+      >
+        Sample Questions
+      </h4>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      />
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      />
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`QuestionsByCategory Component matches snapshot with no questions 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-153rels"
+  >
+    <div
+      class="MuiBox-root css-1s00k8g"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-10zsxzp-MuiTypography-root"
+      >
+        Sample Questions
+      </h4>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    />
+  </div>
+</DocumentFragment>
+`;

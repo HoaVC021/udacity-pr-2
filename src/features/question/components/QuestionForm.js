@@ -44,6 +44,7 @@ const QuestionForm = ({ submit, status }) => {
               fullWidth
               variant="contained"
               loading={status}
+              data-testid="add-question"
             >
               Submit
             </LoadingButton>
